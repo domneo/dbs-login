@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+@import "styles/reboot";
+
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --white: #ffffff;
+  --grey-lighter: #f5f5f5;
+  --grey-light: #b0b9c0;
+  --grey-dark: #172733;
+  --grey-darker: #111b25;
+  --black: #17181a;
+  --red: #ff3333;
+  --violet-light: #d3c2ff;
+  --violet: #ac8cff;
+  --success: #13c998;
+  --warning: #ffb024;
+  --danger: #ff3333;
+  --info: #8657ff;
+  --gradient: linear-gradient(63.18deg, #111b25 19.25%, #202a33 100%);
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  background: var(--gradient);
+  color: var(--white);
+}
+
+h1,
+.h1 {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+h2,
+.h2 {
+  font-size: 3.75rem;
+  font-weight: 400;
+}
+
+h3,
+.h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h4,
+.h4 {
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+h5,
+.h5 {
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+h6,
+.h6 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--violet);
+
+  &:hover {
+    color: var(--violet-light);
+  }
+}
