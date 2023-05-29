@@ -8,7 +8,10 @@
   --grey-dark: #172733;
   --grey-darker: #111b25;
   --black: #17181a;
+  --red-light: #ff8080;
   --red: #ff3333;
+  --red-dark: #b32b2b;
+  --red-darker: #8c2222;
   --violet-light: #d3c2ff;
   --violet: #ac8cff;
   --success: #13c998;
@@ -16,6 +19,15 @@
   --danger: #ff3333;
   --info: #8657ff;
   --gradient: linear-gradient(63.18deg, #111b25 19.25%, #202a33 100%);
+}
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 4px;
 }
 
 body {

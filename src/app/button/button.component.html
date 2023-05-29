@@ -1,1 +1,7 @@
-<button>Button</button>
+<button
+  class="btn btn-{{ variant }}"
+  [disabled]="disabledBoolean"
+  (click)="btnClick()"
+>
+  <ng-content></ng-content>
+</button>

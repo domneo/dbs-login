@@ -19,15 +19,34 @@
   </p>
   <p className="caption">This is a line of caption text.</p>
   <a href="#">This is a text with link.</a>
-  <app-input-field
-    type="text"
-    placeholder="This is a text input"
-    class="input"
-  ></app-input-field>
-  <app-input-field
-    type="password"
-    placeholder="This is a password input"
-    class="input"
-  ></app-input-field>
-  <app-button class="btn btn-primary">Button</app-button>
+  <div style="margin: 16px 0">
+    <app-input-field
+      type="text"
+      placeholder="This is a text input"
+      class="input"
+    ></app-input-field>
+  </div>
+  <div style="margin: 16px 0">
+    <app-input-field
+      type="password"
+      placeholder="This is a password input"
+      class="input"
+    ></app-input-field>
+  </div>
+  <div style="display: flex; gap: 8px; margin: 16px 0">
+    <app-button variant="primary" (onClick)="onButtonClick()"
+      >Primary Button</app-button
+    >
+    <app-button variant="primary" disabled="true"
+      >Primary Button Disabled</app-button
+    >
+  </div>
+  <div style="display: flex; gap: 8px; margin: 16px 0">
+    <app-button variant="secondary" (onClick)="onButtonClick()"
+      >Secondary Button</app-button
+    >
+    <app-button variant="secondary" disabled="true" (onClick)="(onButtonClick)"
+      >Secondary Button Disabled</app-button
+    >
+  </div>
 </div>

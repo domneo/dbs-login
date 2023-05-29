@@ -3,17 +3,50 @@
   padding: 22px 30px;
   border: 2px solid transparent;
   border-radius: 16px;
+  transition: 0.2s all;
   cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .btn-primary {
   color: var(--white);
   background: var(--red);
   border-color: var(--red);
+
+  &:hover:not(:disabled) {
+    background: var(--red-dark);
+    border-color: var(--red-dark);
+
+    &:active {
+      background: var(--red-darker);
+      border-color: var(--red-darker);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .btn-secondary {
   color: var(--white);
   background: transparent;
   border-color: var(--white);
+
+  &:hover:not(:disabled) {
+    color: var(--black);
+    background: var(--white);
+
+    &:active {
+      background: var(--grey-light);
+      border-color: var(--grey-light);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
