@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./elements.component.scss'],
 })
 export class ElementsComponent {
+  onInputChange = (value: string) => {
+    console.log(value);
+  };
   onButtonClick = () => {
     console.log('clicked');
   };

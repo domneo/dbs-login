@@ -1,1 +1,14 @@
-<input type="text" />
+<div>
+  <input
+    type="{{ type }}"
+    placeholder="{{ placeholder }}"
+    value="{{ value }}"
+    class="input input-{{ variant }}"
+    (change)="valueChange($event)"
+  />
+  <small
+    *ngIf="validationText"
+    class="validation validation={{ validationType }}"
+    >{{ validationIcon }}{{ validationText }}</small
+  >
+</div>

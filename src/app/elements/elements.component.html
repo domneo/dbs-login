@@ -23,14 +23,13 @@
     <app-input-field
       type="text"
       placeholder="This is a text input"
-      class="input"
+      (onChange)="onInputChange($event)"
     ></app-input-field>
   </div>
   <div style="margin: 16px 0">
     <app-input-field
       type="password"
       placeholder="This is a password input"
-      class="input"
     ></app-input-field>
   </div>
   <div style="display: flex; gap: 8px; margin: 16px 0">

@@ -1,3 +1,14 @@
 .input {
   font-size: 1.5rem;
+  color: var(--grey-light);
+  background: transparent;
+  border: 1px solid var(--grey-light);
+  border-radius: 16px;
+  padding: 22px;
+  transition: 0.2s all;
+
+  &:focus {
+    color: var(--white);
+    background: #ffffff0d;
+  }
 }
