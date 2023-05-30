@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-elements',
-  templateUrl: './elements.component.html',
-  styleUrls: ['./elements.component.scss'],
+  selector: 'app-playground',
+  templateUrl: './playground.component.html',
+  styleUrls: ['./playground.component.scss'],
 })
-export class ElementsComponent {
+export class PlaygroundComponent {
   onInputChange = (value: string) => {
     console.log(value);
   };
