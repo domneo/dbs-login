@@ -23,6 +23,9 @@
     <app-input-field
       type="text"
       placeholder="This is a text input"
+      validationIcon="check-badge"
+      validationText="Username is available"
+      validationType="success"
       (onChange)="onInputChange($event)"
     ></app-input-field>
   </div>
@@ -30,6 +33,10 @@
     <app-input-field
       type="password"
       placeholder="This is a password input"
+      validationIcon="x-mark"
+      validationText="Password is too long"
+      validationType="error"
+      (onChange)="onInputChange($event)"
     ></app-input-field>
   </div>
   <div style="display: flex; gap: 8px; margin: 16px 0">

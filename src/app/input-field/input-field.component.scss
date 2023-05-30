@@ -1,3 +1,9 @@
+.field {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .input {
   font-size: 1.5rem;
   color: var(--grey-light);
@@ -11,4 +17,21 @@
     color: var(--white);
     background: #ffffff0d;
   }
+}
+
+.validation {
+  font-size: 16px;
+  padding: 0 8px;
+}
+
+.validation-success {
+  color: var(--success);
+}
+
+.validation-error {
+  color: var(--danger);
+}
+
+.validation-icon {
+  margin-right: 4px;
 }

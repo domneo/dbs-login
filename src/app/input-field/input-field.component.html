@@ -1,14 +1,18 @@
-<div>
+<div class="field">
   <input
+    attr.aria-label="{{ label }}"
+    id="{{ id }}"
     type="{{ type }}"
     placeholder="{{ placeholder }}"
     value="{{ value }}"
     class="input input-{{ variant }}"
     (change)="valueChange($event)"
   />
-  <small
+  <div
     *ngIf="validationText"
-    class="validation validation={{ validationType }}"
-    >{{ validationIcon }}{{ validationText }}</small
+    class="validation validation-{{ validationType }}"
   >
+    <span class="validation-icon">{{ validationIcon }}</span>
+    {{ validationText }}
+  </div>
 </div>
