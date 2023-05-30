@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PlaygroundComponent } from './playground/playground.component';
-import { ButtonComponent } from './button/button.component';
-import { InputFieldComponent } from './input-field/input-field.component';
-import { IconComponent } from './icon/icon.component';
+import { ButtonComponent } from './components/button/button.component';
+import { InputFieldComponent } from './components/input-field/input-field.component';
+import { IconComponent } from './components/icon/icon.component';
 
 @NgModule({
   declarations: [
