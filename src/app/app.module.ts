@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ElementsComponent } from './elements/elements.component';
 import { ButtonComponent } from './button/button.component';
 import { InputFieldComponent } from './input-field/input-field.component';
+import { IconComponent } from './icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { InputFieldComponent } from './input-field/input-field.component';
     ElementsComponent,
     ButtonComponent,
     InputFieldComponent,
+    IconComponent,
   ],
   imports: [BrowserModule],
   providers: [],

@@ -12,7 +12,9 @@
     *ngIf="validationText"
     class="validation validation-{{ validationType }}"
   >
-    <span class="validation-icon">{{ validationIcon }}</span>
+    <div class="validation-icon">
+      <app-icon name="{{ validationIcon }}" size="24px"></app-icon>
+    </div>
     {{ validationText }}
   </div>
 </div>
