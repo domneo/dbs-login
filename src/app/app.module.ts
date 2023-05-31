@@ -8,6 +8,7 @@ import { PlaygroundComponent } from './playground/playground.component';
 import { ButtonComponent } from './components/button/button.component';
 import { InputFieldComponent } from './components/input-field/input-field.component';
 import { IconComponent } from './components/icon/icon.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { IconComponent } from './components/icon/icon.component';
     ButtonComponent,
     InputFieldComponent,
     IconComponent,
+    AlertComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],

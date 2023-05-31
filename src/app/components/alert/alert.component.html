@@ -1,0 +1,11 @@
+<div class="alert alert-{{ variant }}">
+  <div class="alert-icon">
+    <app-icon
+      *ngIf="icon"
+      name="{{ icon }}"
+      size="32px"
+      thickness="2"
+    ></app-icon>
+  </div>
+  <ng-content></ng-content>
+</div>

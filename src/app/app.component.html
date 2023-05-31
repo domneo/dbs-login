@@ -5,12 +5,12 @@
     <!-- <app-playground></app-playground> -->
     <img src="assets/Logo.svg" alt="DBS Logo" class="logo" />
     <form (ngSubmit)="onSubmit()" class="form">
-      <div *ngIf="loadError">
+      <app-alert *ngIf="loadError" variant="warning">
         <strong>
           There was an error loading your session data.<br />
           Please log in again.
         </strong>
-      </div>
+      </app-alert>
       <app-input-field
         ngModelGroup="username"
         name="username"
@@ -45,12 +45,12 @@
         (onChange)="onInputChange($event)"
       ></app-input-field>
       <app-button variant="primary" class="submitBtn">Log In</app-button>
-      <div *ngIf="submitError">
+      <app-alert *ngIf="submitError" variant="error">
         <strong>
           Sorry, there was an error while trying to log you in.<br />
           Please try again later.
         </strong>
-      </div>
+      </app-alert>
     </form>
   </div>
 </ng-template>

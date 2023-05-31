@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class IconComponent {
   @Input() name: string = '';
   @Input() size?: string = '100%';
+  @Input() thickness?: string = '1';
 }

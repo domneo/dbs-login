@@ -1,0 +1,39 @@
+.alert {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 6px solid var(--info);
+  background: var(--grey-lighter);
+  color: var(--grey-dark);
+
+  .alert-icon {
+    color: var(--info);
+  }
+}
+
+.alert-success {
+  border-color: var(--success);
+
+  .alert-icon {
+    color: var(--success);
+  }
+}
+
+.alert-warning {
+  border-color: var(--warning);
+
+  .alert-icon {
+    color: var(--warning);
+  }
+}
+
+.alert-error {
+  border-color: var(--danger);
+
+  .alert-icon {
+    color: var(--danger);
+  }
+}
