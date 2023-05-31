@@ -1,3 +1,12 @@
+.logged-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 48px;
+}
+
 .login {
   width: 100%;
   min-height: 100vh;
@@ -25,5 +34,5 @@
 
 .submitBtn {
   margin: 16px 0 0 48px;
-  display:flex;
+  display: flex;
 }

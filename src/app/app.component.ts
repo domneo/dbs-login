@@ -201,4 +201,10 @@ export class AppComponent {
       this.isLoggingIn = false;
     }
   }
+
+  onLogOut() {
+    this.cookieService.delete('userId');
+    this.cookieService.delete('sessionToken');
+    this.isLoggedIn = false;
+  }
 }

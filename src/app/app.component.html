@@ -1,9 +1,15 @@
-<ng-template [ngIf]="isLoggedIn" [ngIfElse]="login">logged in</ng-template>
-
-<ng-template #login>
-  <div class="login">
-    <!-- <app-playground></app-playground> -->
-    <img src="assets/Logo.svg" alt="DBS Logo" class="logo" />
+<div class="login">
+  <!-- <app-playground></app-playground> -->
+  <img src="assets/Logo.svg" alt="DBS Logo" class="logo" />
+  <ng-template [ngIf]="isLoggedIn" [ngIfElse]="login">
+    <div class="logged-in">
+      <h3>Welcome</h3>
+      <app-button variant="secondary" (onClick)="onLogOut()"
+        >Log Out</app-button
+      >
+    </div>
+  </ng-template>
+  <ng-template #login>
     <form (ngSubmit)="onSubmit()" class="form">
       <app-alert *ngIf="loadError" variant="warning">
         <strong>
@@ -52,5 +58,5 @@
         </strong>
       </app-alert>
     </form>
-  </div>
-</ng-template>
+  </ng-template>
+</div>
