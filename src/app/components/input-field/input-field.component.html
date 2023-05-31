@@ -1,13 +1,16 @@
 <div class="field">
-  <input
-    attr.aria-label="{{ label }}"
-    id="{{ id }}"
-    type="{{ type }}"
-    placeholder="{{ placeholder }}"
-    value="{{ value }}"
-    class="input input-{{ variant }}"
-    (change)="valueChange($event)"
-  />
+  <div class="input-wrapper">
+    <app-icon *ngIf="icon" name="{{ icon }}" size="32px"></app-icon>
+    <input
+      attr.aria-label="{{ label }}"
+      id="{{ id }}"
+      type="{{ type }}"
+      placeholder="{{ placeholder }}"
+      value="{{ value }}"
+      class="input input-{{ variant }}"
+      (change)="valueChange($event)"
+    />
+  </div>
   <div
     *ngIf="validationText"
     class="validation validation-{{ validationType }}"

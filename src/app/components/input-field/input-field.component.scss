@@ -1,10 +1,18 @@
 .field {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+.input-wrapper {
+  width: 100%;
+  display:flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .input {
+  width: 100%;
   font-size: 1.5rem;
   color: var(--grey-light);
   background: transparent;
