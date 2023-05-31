@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PlaygroundComponent } from './playground/playground.component';
@@ -15,7 +17,7 @@ import { IconComponent } from './components/icon/icon.component';
     InputFieldComponent,
     IconComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,19 +1,56 @@
-<div class="login">
-  <!-- <app-playground></app-playground> -->
-  <img src="assets/Logo.svg" alt="DBS Logo" class="logo" />
-  <form class="form">
-    <app-input-field
-      type="text"
-      placeholder="Username"
-      icon="user-circle"
-      class="input-field"
-    ></app-input-field>
-    <app-input-field
-      type="password"
-      placeholder="Password"
-      icon="lock-closed"
-      class="input-field"
-    ></app-input-field>
-    <app-button variant="primary" class="submitBtn">Log In</app-button>
-  </form>
-</div>
+<ng-template [ngIf]="isLoggedIn" [ngIfElse]="login">logged in</ng-template>
+
+<ng-template #login>
+  <div class="login">
+    <!-- <app-playground></app-playground> -->
+    <img src="assets/Logo.svg" alt="DBS Logo" class="logo" />
+    <form (ngSubmit)="onSubmit()" class="form">
+      <div *ngIf="loadError">
+        <strong>
+          There was an error loading your session data.<br />
+          Please log in again.
+        </strong>
+      </div>
+      <app-input-field
+        ngModelGroup="username"
+        name="username"
+        label="Username"
+        placeholder="Username"
+        required="true"
+        disabled="{{ isLoggingIn }}"
+        type="text"
+        variant="{{ usernameValidationType }}"
+        icon="user-circle"
+        class="input-field"
+        validationIcon="{{ usernameValidationIcon }}"
+        validationText="{{ usernameValidationText }}"
+        validationType="{{ usernameValidationType }}"
+        (onChange)="onInputChange($event)"
+      ></app-input-field>
+      <app-input-field
+        ngModelGroup="password"
+        name="password"
+        label="Password"
+        placeholder="Password"
+        required="true"
+        disabled="{{ isLoggingIn }}"
+        type="password"
+        variant="{{ passwordValidationType }}"
+        icon="lock-closed"
+        class="input-field"
+        validationIcon="{{ passwordValidationIcon }}"
+        validationText="{{ passwordValidationText }}"
+        validationType="{{ passwordValidationType }}"
+        validationType="success"
+        (onChange)="onInputChange($event)"
+      ></app-input-field>
+      <app-button variant="primary" class="submitBtn">Log In</app-button>
+      <div *ngIf="submitError">
+        <strong>
+          Sorry, there was an error while trying to log you in.<br />
+          Please try again later.
+        </strong>
+      </div>
+    </form>
+  </div>
+</ng-template>

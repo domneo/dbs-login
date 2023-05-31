@@ -2,11 +2,14 @@
   <div class="input-wrapper">
     <app-icon *ngIf="icon" name="{{ icon }}" size="32px"></app-icon>
     <input
+      name="{{ name }}"
       attr.aria-label="{{ label }}"
       id="{{ id }}"
-      type="{{ type }}"
-      placeholder="{{ placeholder }}"
       value="{{ value }}"
+      [required]="requiredBoolean"
+      [disabled]="disabledBoolean"
+      placeholder="{{ placeholder }}"
+      type="{{ type }}"
       class="input input-{{ variant }}"
       (change)="valueChange($event)"
     />
@@ -14,6 +17,7 @@
   <div
     *ngIf="validationText"
     class="validation validation-{{ validationType }}"
+    [ngStyle]="{ 'margin-left': icon ? '48px' : '0' }"
   >
     <div class="validation-icon">
       <app-icon name="{{ validationIcon }}" size="24px"></app-icon>
