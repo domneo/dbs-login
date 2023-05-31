@@ -1,3 +1,19 @@
 <div class="login">
-  <app-playground></app-playground>
+  <!-- <app-playground></app-playground> -->
+  <img src="assets/Logo.svg" alt="DBS Logo" class="logo" />
+  <form class="form">
+    <app-input-field
+      type="text"
+      placeholder="Username"
+      icon="user-circle"
+      class="input-field"
+    ></app-input-field>
+    <app-input-field
+      type="password"
+      placeholder="Password"
+      icon="lock-closed"
+      class="input-field"
+    ></app-input-field>
+    <app-button variant="primary" class="submitBtn">Log In</app-button>
+  </form>
 </div>
