@@ -9,6 +9,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { InputFieldComponent } from './components/input-field/input-field.component';
 import { IconComponent } from './components/icon/icon.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AlertComponent } from './components/alert/alert.component';
     InputFieldComponent,
     IconComponent,
     AlertComponent,
+    SpinnerComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],

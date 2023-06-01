@@ -186,15 +186,21 @@ export class AppComponent {
         sessionToken: uuidv4(),
       };
       this.setSessionCookies(session);
-      this.sessionService.setSession(session).subscribe({
-        next: () => {
-          this.isLoggedIn = true;
-        },
-        error: (error) => {
-          this.submitError = error.message;
-        },
-      });
-      this.isLoggingIn = false;
+      setTimeout(() => {
+        this.sessionService.setSession(session).subscribe({
+          next: async () => {
+            this.isLoggedIn = true;
+            this.username = '';
+            this.password = '';
+          },
+          error: (error) => {
+            this.submitError = error.message;
+          },
+          complete: () => {
+            this.isLoggingIn = false;
+          },
+        });
+      }, 1000); // Simulate delay
     } catch (error) {
       if (error instanceof z.ZodError) {
         error.issues.forEach((issue) => {

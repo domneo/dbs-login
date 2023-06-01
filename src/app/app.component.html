@@ -3,8 +3,8 @@
   <img src="assets/Logo.svg" alt="DBS Logo" class="logo" />
   <ng-template [ngIf]="isLoggedIn" [ngIfElse]="login">
     <div class="logged-in">
-      <h1>Welcome</h1>
-      <app-button variant="secondary" (onClick)="onLogOut()">
+      <h1 class="welcome">Welcome</h1>
+      <app-button variant="secondary" (onClick)="onLogOut()" class="logoutBtn">
         Log Out
       </app-button>
     </div>
@@ -50,7 +50,15 @@
         (onChange)="onInputChange($event)"
       ></app-input-field>
       <div class="submitBtn">
-        <app-button variant="primary">Create</app-button>
+        <app-button variant="primary" [disabled]="isLoggingIn">
+          <div class="submitBtn--loading">
+            <ng-template [ngIf]="isLoggingIn" [ngIfElse]="createBtn">
+              One moment
+              <app-spinner size="36"></app-spinner>
+            </ng-template>
+            <ng-template #createBtn>Create Account</ng-template>
+          </div>
+        </app-button>
         <app-alert *ngIf="submitError" variant="error">
           <strong>
             Sorry, there was an error while trying to log you in. Please try
