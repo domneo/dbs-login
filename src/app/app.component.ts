@@ -192,11 +192,10 @@ export class AppComponent {
             this.isLoggedIn = true;
             this.username = '';
             this.password = '';
+            this.isLoggingIn = false;
           },
           error: (error) => {
             this.submitError = error.message;
-          },
-          complete: () => {
             this.isLoggingIn = false;
           },
         });
