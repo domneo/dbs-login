@@ -94,8 +94,6 @@ export class AppComponent {
         this.passwordValidationText = '';
         this.passwordValidationType = 'default';
         break;
-      default:
-        break;
     }
   }
 
@@ -116,13 +114,11 @@ export class AppComponent {
         this.passwordValidationText = text;
         this.passwordValidationType = type;
         break;
-      default:
-        break;
     }
   }
 
   // Validate user input on change (on blur)
-  onInputChange(input: HTMLInputElement) {
+  onInputChange(input: Pick<HTMLInputElement, 'name' | 'value'>) {
     switch (input.name) {
       case 'username':
         this.username = input.value;
@@ -160,8 +156,6 @@ export class AppComponent {
             );
           }
         }
-        break;
-      default:
         break;
     }
   }

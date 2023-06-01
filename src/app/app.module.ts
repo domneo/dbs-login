@@ -5,20 +5,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PlaygroundComponent } from './playground/playground.component';
-import { ButtonComponent } from './components/button/button.component';
-import { InputFieldComponent } from './components/input-field/input-field.component';
-import { IconComponent } from './components/icon/icon.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { ButtonComponent } from './components/button/button.component';
+import { IconComponent } from './components/icon/icon.component';
+import { InputFieldComponent } from './components/input-field/input-field.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlaygroundComponent,
-    ButtonComponent,
-    InputFieldComponent,
-    IconComponent,
     AlertComponent,
+    ButtonComponent,
+    IconComponent,
+    InputFieldComponent,
     SpinnerComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
