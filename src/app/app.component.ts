@@ -168,6 +168,9 @@ export class AppComponent {
 
   async onSubmit() {
     this.isLoggingIn = true;
+    this.loadError = '';
+    this.submitError = '';
+
     // Validate username and password
     try {
       SessionValidation.parse({

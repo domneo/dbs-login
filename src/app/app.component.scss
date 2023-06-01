@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 48px;
+  gap: 64px;
   margin-top: 48px;
 }
 
@@ -35,4 +35,6 @@
 .submitBtn {
   margin: 16px 0 0 48px;
   display: flex;
+  flex-direction: column;
+  gap: 32px;
 }

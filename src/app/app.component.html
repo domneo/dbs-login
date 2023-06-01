@@ -3,18 +3,17 @@
   <img src="assets/Logo.svg" alt="DBS Logo" class="logo" />
   <ng-template [ngIf]="isLoggedIn" [ngIfElse]="login">
     <div class="logged-in">
-      <h3>Welcome</h3>
-      <app-button variant="secondary" (onClick)="onLogOut()"
-        >Log Out</app-button
-      >
+      <h1>Welcome</h1>
+      <app-button variant="secondary" (onClick)="onLogOut()">
+        Log Out
+      </app-button>
     </div>
   </ng-template>
   <ng-template #login>
     <form (ngSubmit)="onSubmit()" class="form">
       <app-alert *ngIf="loadError" variant="warning">
         <strong>
-          There was an error loading your session data.<br />
-          Please log in again.
+          There was an error loading your session data. Please log in again.
         </strong>
       </app-alert>
       <app-input-field
@@ -50,13 +49,15 @@
         validationType="success"
         (onChange)="onInputChange($event)"
       ></app-input-field>
-      <app-button variant="primary" class="submitBtn">Create</app-button>
-      <app-alert *ngIf="submitError" variant="error">
-        <strong>
-          Sorry, there was an error while trying to log you in.<br />
-          Please try again later.
-        </strong>
-      </app-alert>
+      <div class="submitBtn">
+        <app-button variant="primary">Create</app-button>
+        <app-alert *ngIf="submitError" variant="error">
+          <strong>
+            Sorry, there was an error while trying to log you in. Please try
+            again later.
+          </strong>
+        </app-alert>
+      </div>
     </form>
   </ng-template>
 </div>
